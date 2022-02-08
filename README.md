@@ -2,7 +2,7 @@
 
 Run [QGIS Desktop App (3.18)](https://qgis.org/en/site/) vi BinderHub! Click the button below to launch a server:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/giswqs/jupyter-qgis/qgis?urlpath=desktop)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Youssef-Harby/jupyter-qgis/qgis?urlpath=desktop)
 
 As more GIS datasets are hosted in Cloud datacenters it can be advantageous to move your computing environment to the data rather than the other way around. Jupyter Servers are most commonly used to run Jupyter Notebooks, but they also facilitate running many other applications! For example [VScode](https://github.com/betatim/vscode-binder) or [Rstudio](https://github.com/binder-examples/r-conda). Those modern applications are built to run in browsers, but what about things like QGIS, a GUI desktop application for geospatial analysis? Thanks to the brilliant folks working on project Jupyter you can even run QGIS!
 
