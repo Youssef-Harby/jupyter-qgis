@@ -34,4 +34,4 @@ RUN cd /opt/install && \
 # deepbands Plugins
 RUN git clone https://github.com/deepbands/buildseg.git Downloads
 RUN mkdir -p ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins
-RUN ln -s  ~/Downloads/buildseg/buildseg ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins
+# RUN ln -s  ~/Downloads/buildseg/buildseg ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins
