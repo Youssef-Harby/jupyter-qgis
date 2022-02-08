@@ -6,6 +6,7 @@ USER root
 RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
    firefox \
+   git \
    xfce4 \
    xfce4-panel \
    xfce4-session \
@@ -19,6 +20,9 @@ RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_a
    apt-get remove -y -q light-locker && \
    rm ./turbovnc_2.2.5_amd64.deb && \
    ln -s /opt/TurboVNC/bin/* /usr/local/bin/
+
+# deepbands Plugins
+RUN git clone https://github.com/deepbands/buildseg.git
 
 # apt-get may result in root-owned directories/files under $HOME
 RUN chown -R $NB_UID:$NB_GID $HOME
