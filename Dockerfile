@@ -21,11 +21,6 @@ RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_a
    rm ./turbovnc_2.2.5_amd64.deb && \
    ln -s /opt/TurboVNC/bin/* /usr/local/bin/
 
-# deepbands Plugins
-RUN git clone https://github.com/deepbands/buildseg.git Downloads
-RUN mkdir /home/jovyan/.local/share/QGIS/QGIS3/profiles/default/python/plugins
-RUN cp -r ~/Downloads/buildseg/buildseg /home/jovyan/.local/share/QGIS/QGIS3/profiles/default/python/Plugins
-
 # apt-get may result in root-owned directories/files under $HOME
 RUN chown -R $NB_UID:$NB_GID $HOME
 
@@ -35,3 +30,8 @@ RUN fix-permissions /opt/install
 USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
+
+# deepbands Plugins
+RUN git clone https://github.com/deepbands/buildseg.git Downloads
+RUN mkdir /home/jovyan/.local/share/QGIS/QGIS3/profiles/default/python/plugins
+RUN cp -r ~/Downloads/buildseg/buildseg /home/jovyan/.local/share/QGIS/QGIS3/profiles/default/python/Plugins
