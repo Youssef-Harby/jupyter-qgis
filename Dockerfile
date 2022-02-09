@@ -8,7 +8,6 @@ RUN apt-get -y update \
    firefox \
    git \
    gcc \
-   gcc-c++ \
    build-essential \
    xfce4 \
    xfce4-panel \
