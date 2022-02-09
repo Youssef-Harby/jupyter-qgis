@@ -7,6 +7,9 @@ RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
    firefox \
    git \
+   gcc \
+   gcc-c++ \
+   build-essential \
    xfce4 \
    xfce4-panel \
    xfce4-session \
