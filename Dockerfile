@@ -35,3 +35,6 @@ RUN cd /opt/install && \
 RUN git clone https://github.com/deepbands/buildseg.git Downloads
 RUN mkdir -p ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins
 RUN ln -s  ~/Downloads/buildseg/ ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/
+
+RUN git clone https://github.com/deepbands/buildseg.git
+RUN ln -s  ~/deep-learning-datasets-maker/deep-learning-datasets-maker/ ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/
